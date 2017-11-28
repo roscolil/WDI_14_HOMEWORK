@@ -4,8 +4,9 @@ console.log('Hello ' + name + '. ' + 'Nice to meet you');
 
 // The vegan test
 var foodChoice = prompt('On the menu tonight: Steak, fruit salad, tofurkey, pork chops. What would you like to eat?');
+var foodChoiceLwr = foodChoice.toLowerCase();
 
-if (foodChoice === 'Steak' || foodChoice === 'pork chops') {
+if (foodChoice === 'steak' || foodChoice === 'pork chops') {
   console.log('Vegans beware!');
 } else {
   console.log('This cuisine is vegan friendly');
@@ -28,3 +29,12 @@ var Age1 = currentYear - birthYear;
 var possibleAge = Age1 - 1;
 
 console.log('They are either ' + possibleAge + ' or ' + Age1 + ' years old.');
+
+// The Lifetime Supply Calculator
+var currentAge = 44;
+var maxAge = 100;
+var estDailyAmount = 2;
+
+var totalSnacksToEat = 2 * (maxAge - currentAge);
+
+console.log('You will need ' + totalSnacksToEat + ' snacks to last you until the ripe old age of ' + maxAge);
