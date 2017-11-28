@@ -18,3 +18,13 @@ var geographicLocation = 'Melbourne';
 var jobTitle = 'Developer';
 
 console.log('You will be a ' + jobTitle + ' in ' + geographicLocation + ', and married to ' + partnersName + ' with ' + numberOfChildren + ' kid(s).');
+
+// The Age Calculator
+var getYear = new Date();
+var currentYear = getYear.getFullYear();
+var birthYear = prompt('What is the year of your birth?');
+
+var Age1 = currentYear - birthYear;
+var possibleAge = Age1 - 1;
+
+console.log('They are either ' + possibleAge + ' or ' + Age1 + ' years old.');
