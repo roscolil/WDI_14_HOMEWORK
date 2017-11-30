@@ -12,14 +12,19 @@ var SandringhamLine = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', '
 
 var originIndex = alameinLine.indexOf(origin);
 var destIndex = alameinLine.indexOf(destination) + 1;
-var stationStr = alameinLine.slice(originIndex, destIndex).toString();
-var stops = Math.abs(destIndex - originIndex - 1);
+var stationStr = alameinLine.slice(originIndex, destIndex);
 
 
-for (var i = 0; i <= alameinLine.length; i++) {
-    console.log(stationStr + ' --------> ');
-}
-console.log(stops + ' stops total.');
+ for (i = 0; i <= stationStr.length - 2; i++) {
+  console.log(stationStr[i].toString() + ' --------> ');
+ }
+ console.log(stationStr[i]);
+
+ var stops = Math.abs(destIndex - originIndex - 1);
+ console.log(stops + ' stops total.');
+
+
+
 
 
 
