@@ -41,14 +41,37 @@
 //     console.log('You will need to change lines at Richmond');
 //   }
 
-var trainLines = [alameinLine, glenWaverlyLine, sandringhamLine];
+// var trainLines = [alameinLine, glenWaverlyLine, sandringhamLine];
+//
+// for (var i = 0; i < trainLines.length; i++) {
+//   if (trainLines[i].includes(origin) && trainLines[i].includes(destination)) {
+//     var originIndex = trainLines[i].indexOf(origin);
+//     var destIndex = trainLines[i].indexOf(destination);
+//     var stationStr = trainLines[i].slice(originIndex, destIndex + 1);
+//
+//     displayStations(stationStr);
+//     displayStops(destIndex, originIndex);
+// }
 
-for (var i = 0; i < trainLines.length; i++) {
-  if (trainLines[i].includes(origin) && trainLines[i].includes(destination)) {
-    var originIndex = trainLines[i].indexOf(origin);
-    var destIndex = trainLines[i].indexOf(destination);
-    var stationStr = trainLines[i].slice(originIndex, destIndex + 1);
 
-    displayStations(stationStr);
-    displayStops(destIndex, originIndex);
-}
+
+
+     var origin = prompt('Please enter the station you are coming from:').toLowerCase();
+     var destination = prompt('Please enter the station you are going to:').toLowerCase();
+
+
+     // var origin = '';
+     // var destination = '';
+     // var userInput = '';
+
+     // var trainLinesLower = alameinLine.join(glenWaverlyLine, sandringhamLine);
+
+     var validateInput = function(origin) {
+       if (origin !== trainLines.includes()) {
+         alert('Please enter a valid station.')
+       } else if (origin === null) {
+         alert('You cannot leave this field empty. Click OK to try again.');
+         origin = prompt('Please enter the station you are coming from:').toLowerCase();
+       }
+       return origin;
+     };
