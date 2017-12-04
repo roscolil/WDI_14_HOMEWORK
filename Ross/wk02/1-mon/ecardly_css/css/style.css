@@ -5,17 +5,22 @@ body {
 
 h3 {
   text-align: left;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 header {
   background-image: url("../images/background.jpg");
   background-repeat: repeat-x;
-
 }
 
-footer img {
-  align-items: center;
+header img {
+  width: 180px;
+  height: 180px;
+  padding: 40px;
+}
+
+footer {
+
 }
 
 section {
@@ -28,16 +33,30 @@ section {
 
 }
 
+section p {
+  font-size: 13px;
+}
+
 aside {
   background-color: white;
   display: inline-block;
+  vertical-align: top;
+  margin: 0 20px 20px 20px;
   float: left;
   width: 20%;
 }
 
 ul {
   font-weight: bold;
-  text-decoration: none;
+  font-size: 12px;
+  list-style: none;
+}
+
+aside img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
 .dotted_line {
@@ -56,22 +75,24 @@ ul {
 
 .comments {
   color: #d45900;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .download {
   color: #d45900;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 12.5px;
 }
 
 .author {
   color: #d45900;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .section_content {
   width: 550px;
   padding: 20px;
-}
-
-.clearfix {
-  overflow: auto;
 }
