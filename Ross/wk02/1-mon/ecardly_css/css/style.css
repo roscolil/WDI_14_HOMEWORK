@@ -1,0 +1,13 @@
+body {
+  background-color: lightgrey;
+}
+
+header {
+  background-image: url("images/background.jpg");
+  background-repeat: repeat-x;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+}
