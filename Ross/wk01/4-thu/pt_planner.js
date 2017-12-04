@@ -4,8 +4,8 @@
 // var origin = prompt('Please enter the station you are coming from:');
 // var destination = prompt('Please enter the station you are going to:');
 
-var origin = 'Richmond';
-var destination = 'Windsor';
+var origin = 'Flinder Street';
+var destination = 'Kooyong';
 var numberOfStops;
 var stationStr;
 
@@ -34,6 +34,10 @@ var displayStations = function(stationStr) {
   return stationStr;
 };
 
+var changeStationsMsg = function() {
+  console.log('You will need to change lines at Richmond');
+};
+
 for (var i = 0; i < trainNetwork.length; i++) {
   if (trainNetwork[i].includes(origin) && trainNetwork[i].includes(destination)) {
     var originIndex = trainNetwork[i].indexOf(origin);
@@ -46,6 +50,21 @@ for (var i = 0; i < trainNetwork.length; i++) {
     displayStops(destIndex, originIndex);
     console.log(numberOfStops + ' stops total.');
   }
+  else {   // If origin and destination not on same line
+    var originIndex = trainNetwork[i].indexOf(origin);
+    var destIndex = trainNetwork[i].indexOf(destination);
+    var stationStr = trainNetwork[i].slice(originIndex, destIndex + 1);
+
+    displayStations(stationStr);
+    console.log(stationStr.join(' -----> '));
+
+    displayStops(destIndex, originIndex);
+    console.log(numberOfStops + ' stops total.');
+  }
+  changeStationsMsg();
 }
 
-// console.log('You will need to change lines at Richmond');
+
+// Notes: Need to get the reverse trip working
+//        Build trip via Richmond for multiple lines
+//        Validate user input
