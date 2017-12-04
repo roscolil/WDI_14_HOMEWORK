@@ -3,6 +3,11 @@ body {
   text-align: left;
 }
 
+h3 {
+  text-align: left;
+  padding-top: 20px;
+}
+
 header {
   background-image: url("../images/background.jpg");
   background-repeat: repeat-x;
@@ -15,12 +20,24 @@ footer img {
 
 section {
   background-color: white;
-  width: 800px;
+  box-sizing: border-box;
+  width: 40%;
+  text-align: left;
+  margin-left: 40px;
+  float: left;
 
 }
 
 aside {
   background-color: white;
+  display: inline-block;
+  float: left;
+  width: 20%;
+}
+
+ul {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .dotted_line {
@@ -38,14 +55,23 @@ aside {
 }
 
 .comments {
-  color: orange;
+  color: #d45900;
 }
 
 .download {
-  color: orange;
+  color: #d45900;
   text-decoration: none;
 }
 
 .author {
-  color: orange;
+  color: #d45900;
+}
+
+.section_content {
+  width: 550px;
+  padding: 20px;
+}
+
+.clearfix {
+  overflow: auto;
 }
