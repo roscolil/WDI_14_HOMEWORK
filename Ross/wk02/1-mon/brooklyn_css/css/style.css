@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  margin: 70px 0 0 70px;
+  margin: 69px 0 0 69px;
   color: grey;
   font-size: 14px;
 }
@@ -34,11 +34,7 @@ time {
   color: #0091bf;
 }
 
-
-
-.nbc, .huffpost, .lucky, .marieclaire {
-  box-sizing: border-box;
+section img {
   display: inline-block;
-  border: 4px solid lightgrey;
-  width: 20%;
+  border: 5px solid lightgrey;
 }
