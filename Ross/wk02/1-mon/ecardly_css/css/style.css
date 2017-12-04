@@ -1,13 +1,51 @@
 body {
   background-color: lightgrey;
+  text-align: left;
 }
 
 header {
-  background-image: url("images/background.jpg");
+  background-image: url("../images/background.jpg");
   background-repeat: repeat-x;
+
+}
+
+footer img {
+  align-items: center;
+}
+
+section {
+  background-color: white;
+  width: 800px;
+
+}
+
+aside {
+  background-color: white;
+}
+
+.dotted_line {
+ color: black;
+ border-bottom: 1px dotted;
+}
+
+.solid_line {
+  color: black;
 }
 
 .logo {
   display: block;
   margin: auto;
+}
+
+.comments {
+  color: orange;
+}
+
+.download {
+  color: orange;
+  text-decoration: none;
+}
+
+.author {
+  color: orange;
 }
