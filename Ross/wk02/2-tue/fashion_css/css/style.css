@@ -9,21 +9,21 @@ body {
 }
 
 .container {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
 }
 
 header h1 {
   color: red;
   font-size: 40px;
-  float: left;
+  margin: 10px auto;
 }
 
 .topnav a {
   background-color: black;
   border: 1px solid white;
   float: left;
-  color: #f2f2f2;
+  color: lightgrey;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -32,7 +32,7 @@ header h1 {
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: lightgrey;
     color: black;
 }
 
@@ -46,6 +46,7 @@ main {
 article {
   border-bottom: 1px solid lightgrey;
   padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 aside {
@@ -66,7 +67,6 @@ article img {
 time {
   color: lightgrey;
   font-size: 30px;
-  font-weight: 200;
 }
 
 span {
@@ -82,7 +82,11 @@ p span {
   text-align: left;
 }
 
-article a {
+.continue {
+  text-align: right;
+}
+
+.continue a {
   color: red;
   font-weight: bold;
   text-decoration: none;
@@ -92,34 +96,45 @@ footer nav a {
   text-decoration: none;
   color: red;
   border-right: 1px solid lightgrey;
-  padding: 8px;
+  padding: 10px;
+  float: left;
+}
+
+footer {
+  padding-top: 10px;
 }
 
 .about {
   border-right: 0;
 }
 
-.title {
-  display: inline-block;
-  vertical-align: bottom;
-}
-
 .title span {
   color: grey;
   font-size: 20px;
-  float: right;
-  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .copyright {
   color: lightgrey;
+  clear: left;
+  padding: 10px;
 }
 
 .about_us {
   border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+  color: grey;
 }
 
-.about_us a {
+.about_us h3 {
+  margin-top: 40px;
+}
+
+.more {
+  text-align: right; 
+}
+
+.more a {
   color: red;
   font-weight: bold;
   text-decoration: none;
@@ -128,6 +143,14 @@ footer nav a {
 .popular_posts li a {
   color: red;
   text-decoration: none;
+}
+
+.popular_posts ul {
+  color: grey;
+}
+
+.popular_posts h3 {
+  color: grey;
 }
 
 .ad {
