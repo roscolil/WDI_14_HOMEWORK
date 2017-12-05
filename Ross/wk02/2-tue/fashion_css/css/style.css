@@ -85,9 +85,7 @@ p span {
 article a {
   color: red;
   font-weight: bold;
-  text-align: right;
   text-decoration: none;
-  margin-bottom: 10px;
 }
 
 footer nav a {
@@ -124,7 +122,6 @@ footer nav a {
 .about_us a {
   color: red;
   font-weight: bold;
-  text-align: right;
   text-decoration: none;
 }
 
@@ -138,9 +135,3 @@ footer nav a {
   border-bottom: 1px solid lightgrey;
   padding: 20px;
 }
-/*
- article p::first-letter {
-    font-size: 200%;
-    color: lightgrey;
-}
-*/
