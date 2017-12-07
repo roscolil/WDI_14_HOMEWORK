@@ -3,6 +3,7 @@
 }
 body {
   max-width: 990px;
+  background-color: lightgrey;
 }
 header {
   display: flex;
@@ -33,6 +34,7 @@ section {
   display: inline-block;
   vertical-align: top;
   padding-bottom: 15px;
+  border-radius: 20px;
 }
 
 button {
@@ -50,6 +52,8 @@ input {
   padding: 13px 13px 13px 0;
   font-size: 13px;
   justify-content: center;
+  width: 80%;
+  border-radius: 5px;
 }
 
 input::placeholder {
@@ -78,7 +82,7 @@ h4 {
   width: 200px;
   padding: 30px;
   text-align: center;
-  margin-left: 25px;
+  margin: 25px 0 0 25px;
   display: inline-block;
 }
 
@@ -90,8 +94,4 @@ h4 {
 .checking {
   background-color: yellow;
   border: 2px solid black;
-}
-
-.savings_balance {
-  content: '$000.00';
 }
