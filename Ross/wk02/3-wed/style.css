@@ -50,7 +50,7 @@ input {
   border: 2px solid black;
   margin: 10px auto;
   padding: 13px 13px 13px 0;
-  font-size: 13px;
+  font-size: 12px;
   justify-content: center;
   width: 80%;
   border-radius: 5px;
@@ -64,6 +64,10 @@ p {
   font-size: 30px;
   justify-content: center;
   margin: 0 auto;
+}
+
+span::before {
+content: "$";
 }
 
 h3 {
