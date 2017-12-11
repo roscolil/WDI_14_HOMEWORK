@@ -53,25 +53,58 @@
 //     displayStops(destIndex, originIndex);
 // }
 
+// var origin = prompt('Please enter the station you are coming from:').toLowerCase();
+// var destination = prompt('Please enter the station you are going to:').toLowerCase();
+//
+//
+// // var origin = '';
+// // var destination = '';
+// // var userInput = '';
+//
+// // var trainLinesLower = alameinLine.join(glenWaverlyLine, sandringhamLine);
+//
+// var validateInput = function(origin) {
+//   if (origin !== trainLines.includes()) {
+//     alert('Please enter a valid station.')
+//   } else if (origin === null) {
+//     alert('You cannot leave this field empty. Click OK to try again.');
+//     origin = prompt('Please enter the station you are coming from:').toLowerCase();
+//   }
+//   return origin;
+// };
 
 
+var reverseStations = function (networkArray) {
+  for (var i = 0; i < networkArray.length; i++) {
 
-     var origin = prompt('Please enter the station you are coming from:').toLowerCase();
-     var destination = prompt('Please enter the station you are going to:').toLowerCase();
+    networkArray[i].split('').reverse().join('');
+    return networkArray;
+  }
+};
 
 
-     // var origin = '';
-     // var destination = '';
-     // var userInput = '';
+ var stations = ['Flinders Street', 'Richmond', 'East Richmond'];
 
-     // var trainLinesLower = alameinLine.join(glenWaverlyLine, sandringhamLine);
+ var origin = 'Flinders Street';
+ var destination = 'East Richmond';
+ var journey = '';
 
-     var validateInput = function(origin) {
-       if (origin !== trainLines.includes()) {
-         alert('Please enter a valid station.')
-       } else if (origin === null) {
-         alert('You cannot leave this field empty. Click OK to try again.');
-         origin = prompt('Please enter the station you are coming from:').toLowerCase();
-       }
-       return origin;
-     };
+ console.log('Origin: ' + origin);
+ console.log('Destination: ' + destination);
+
+var originIndex = stations.indexOf(origin);
+var destIndex = stations.indexOf(destination);
+
+if (originIndex !== -1 && destIndex !== -1) {
+    console.log(destIndex - originIndex + ' stops');
+}
+
+for (var i = originIndex; i <= destIndex; i++) {
+  if (i === destIndex) {
+    journey += stations[i];
+  } else {
+    journey += stations[i] + ' ----> ';
+  }
+}
+
+console.log(journey);
