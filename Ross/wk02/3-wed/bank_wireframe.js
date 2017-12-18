@@ -1,5 +1,5 @@
-var savingsBalance = document.querySelector('span');
-var checkingBalance = document.querySelector('span');
+var savingsBalance = document.querySelector('.savings_balance span');
+var checkingBalance = document.querySelector('.checking_balance span');
 var depositButtonSave = document.querySelector('.deposit_button_save');
 var withdrawButtonSave = document.querySelector('.withdraw_button_save');
 var depositButtonCheck = document.querySelector('.deposit_button_check');
@@ -17,7 +17,7 @@ var depositSavings = function () {
 };
 
 var withdrawSavings = function () {
-  if (savingsResult >= savingsInput.value) {
+  if (savingsResult >= Number(savingsInput.value)) {
     savingsResult = savingsResult - Number(savingsInput.value);
     savingsBalance.textContent = savingsResult;
     savingsInput.value = '';
@@ -36,9 +36,9 @@ var depositChecking = function () {
 };
 
 var withdrawChecking = function () {
-    if (depositResult > checkingInput.value) {
-      checkingResult = depositResult - Number(checkingInput.value);
-      checkingBalance.textContent = depositResult;
+    if (checkingResult >= Number(checkingInput.value)) {
+      checkingResult = checkingResult - Number(checkingInput.value);
+      checkingBalance.textContent = checkingResult;
       checkingInput.value = '';
   }
 
@@ -46,6 +46,18 @@ var withdrawChecking = function () {
     checkingInput.style.backgroundColor = 'red';
   }
 };
+
+// Overdraft function..
+
+// if (savingsResult < savingsInput && checkingResult > savingsInput) {
+//   savingsResult = checkingResult - savingsInput;
+//   savingsBalance.textContent = savingsResult;
+// }
+//
+// if (chekingResult < checkingInput && savingsResult > checkingInput) {
+//   checkingResult = savingsResult - checkingInput;
+//   checkingBalance.textContent = checkingResult;
+// }
 
 depositButtonSave.addEventListener('click', depositSavings);
 withdrawButtonSave.addEventListener('click', withdrawSavings);
