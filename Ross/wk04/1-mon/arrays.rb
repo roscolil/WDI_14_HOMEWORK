@@ -19,23 +19,23 @@ require 'pry'
 #
 # 5. Sort the remaining days alphabetically
 
-days_of_the_week = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
+days_of_the_week = #%w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
 
-#[
-#   'Monday',
-#   'Tuesday',
-#   'Wednesday',
-#   'Thursday',
-#   'Friday',
-#   'Saturday',
-#   'Sunday'
-# ]
+[
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday'
+]
 
 remove_last_day = days_of_the_week.pop()
 days_of_the_week.unshift(remove_last_day)
-
 puts "The new array is #{days_of_the_week}"
 
+# New nested array
 new_days_of_the_week = [
   ['Monday',
   'Tuesday',
@@ -48,12 +48,10 @@ new_days_of_the_week = [
 ]
 
 new_days_of_the_week.pop()
-
 puts "New array without the weekend: #{new_days_of_the_week}"
 
 
- alphabetical = new_days_of_the_week.sort     # Not sure about this one
+puts (new_days_of_the_week[0].sort!)
 
 binding.pry
-
 puts 'end'
