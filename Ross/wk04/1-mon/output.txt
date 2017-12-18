@@ -1,0 +1,3 @@
+loc.rb
+data.txt
+3
