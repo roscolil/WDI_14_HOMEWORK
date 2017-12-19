@@ -8,8 +8,8 @@ second_value = planeteers[1]
 # add add_heart
 planeteers.push("Heart")
 
-# remove Capt planeteers
-planeteers.delete_at(2)
+# remove Capt planet
+planeteers = planeteers -["Captain Planet"]
 
 #Combine planeteers with rangers = ["Red", "Blue", "Pink", "Yellow", "Black"] and save the result in a variable called heroes.
 heroes = planeteers.concat rangers
@@ -50,8 +50,10 @@ ninja_turtle[:pizza_toppings][0]
 ninja_turtle.values
 
 #Print out each key-value pair in the following format - "KEY's is equal to VALUE" -- using a method
-puts "#{key}:#{value}"
 
+ninja_turtle.each do |key, value|
+puts "#{key}'s is equal to #{value}"
+end
 
-binding.pry
-puts 'break'
+# binding.pry
+# puts 'break'
