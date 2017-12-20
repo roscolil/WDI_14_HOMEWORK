@@ -19,82 +19,81 @@ require 'pry'
 # Optional Extensions
 # Does your calculator allows addition of more then 2 numbers in one go? eg: 2 + 3 + 4
 
-
-# Didn't quite manage to get the program to restart for another calculation
-# but i got through most of it.
-
 puts 'My crappy calculator:'
-print 'Enter arithmetic operation:
-      1 - Add,
-      2 - Subtract,
-      3 - Multiply,
-      4 - Divide,
-      5 - Exponent,
-      6 - Square Root,
-      (q) to quit: '
 
-operation = gets.chomp
+operation = nil
 
-case operation
-when '1'
-  print 'Enter first number: '
-  num1 = gets.chomp.to_f
+until operation == 'q'
+  print 'Enter arithmetic operation:
+        1 - Add,
+        2 - Subtract,
+        3 - Multiply,
+        4 - Divide,
+        5 - Exponent,
+        6 - Square Root,
+        (q) to quit: '
 
-  print 'Enter second number: '
-  num2 = gets.chomp.to_f
+  operation = gets.chomp
 
-  result = num1 + num2
-  puts "#{num1} added to #{num2} = #{result}"
+  case operation
+  when '1'
+    print 'Enter first number: '
+    num1 = gets.chomp.to_f
 
-when '2'
-  print 'Enter first number: '
-  num1 = gets.chomp.to_f
+    print 'Enter second number: '
+    num2 = gets.chomp.to_f
 
-  print 'Enter second number: '
-  num2 = gets.chomp.to_f
+    result = num1 + num2
+    puts "#{num1} added to #{num2} = #{result}"
 
-  result = num1 - num2
-  puts "#{num1} subtracted from #{num2} = #{result}"
+  when '2'
+    print 'Enter first number: '
+    num1 = gets.chomp.to_f
 
-when '3'
-  print 'Enter first number: '
-  num1 = gets.chomp.to_f
+    print 'Enter second number: '
+    num2 = gets.chomp.to_f
 
-  print 'Enter second number: '
-  num2 = gets.chomp.to_f
+    result = num1 - num2
+    puts "#{num1} subtracted from #{num2} = #{result}"
 
-  result = num1 * num2
-  puts "#{num1} multiplied by #{num2} = #{result}"
+  when '3'
+    print 'Enter first number: '
+    num1 = gets.chomp.to_f
 
-when '4'
-  print 'Enter first number: '
-  num1 = gets.chomp.to_f
+    print 'Enter second number: '
+    num2 = gets.chomp.to_f
 
-  print 'Enter second number: '
-  num2 = gets.chomp.to_f
+    result = num1 * num2
+    puts "#{num1} multiplied by #{num2} = #{result}"
 
-  result = num1 / num2
-  puts "#{num1} divided by #{num2} = #{result}"
-when '5'
-  print 'Enter first number: '
-  num1 = gets.chomp.to_f
+  when '4'
+    print 'Enter first number: '
+    num1 = gets.chomp.to_f
 
-  print 'Enter the exponent: '
-  num2 = gets.chomp.to_f
+    print 'Enter second number: '
+    num2 = gets.chomp.to_f
 
-  result = num1**num2
-  puts "#{num1} to the power of #{num2} = #{result}"
+    result = num1 / num2
+    puts "#{num1} divided by #{num2} = #{result}"
 
-when '6'
-  print 'Enter the number you want the square root of: '
-  num1 = gets.chomp.to_f
+  when '5'
+    print 'Enter first number: '
+    num1 = gets.chomp.to_f
 
-  result = Math.sqrt(num1)
-  puts "The square root of #{num1} is #{result}"
+    print 'Enter the exponent: '
+    num2 = gets.chomp.to_f
 
-when 'q'
-  puts 'See you again!'
+    result = num1**num2
+    puts "#{num1} to the power of #{num2} = #{result}"
 
+  when '6'
+    print 'Enter the number you want the square root of: '
+    num1 = gets.chomp.to_f
+
+    result = Math.sqrt(num1)
+    puts "The square root of #{num1} is #{result}"
+
+  end
 end
 
 
