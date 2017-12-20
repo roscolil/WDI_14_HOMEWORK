@@ -36,7 +36,7 @@ for (var i = 0; i < trainNetwork.length; i++) {
   var originIndex = trainNetwork[i].indexOf(origin);
   var destIndex = trainNetwork[i].indexOf(destination);
 
-  if (trainNetwork[i].includes(origin) && trainNetwork[i].includes(destination)) {
+  if (trainNetwork[i].includes(origin) && trainNetwork[i].includes(destination)) {    // If stations on the same line
 
     if (originIndex < destIndex) {
       var stationStr = trainNetwork[i].slice(originIndex, destIndex + 1);
@@ -48,24 +48,21 @@ for (var i = 0; i < trainNetwork.length; i++) {
 
     displayStations(stationStr);
     displayStops(destIndex, originIndex);
-
   }
-  else {
-
-    }
-    debugger
-
-    if (originIndex < destIndex) {
+  else {                                                                              // If stations of different lines
+    if (destIndex === -1) {    //  going outbound to a different line
       var stationStr = trainNetwork[i].slice(originIndex, destIndex + 1);
+      // another slice perhaps? Or contains
     }
-    else {
+    else {                            // else going inbound
       var stationStr = trainNetwork[i].slice(destIndex, originIndex + 1);
       stationStr = stationStr.reverse();
     }
 
     displayStations(stationStr);
     displayStops(destIndex, originIndex);
-
+    debugger
+    // if contains Richmond
+    changeStationsMsg();
   }
 }
-changeStationsMsg();
