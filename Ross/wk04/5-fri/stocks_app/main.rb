@@ -7,18 +7,20 @@ require "stock_quote"
 
 
 get '/' do
-  stock = params["stock"]
-  quote_response = StockQuote::Stock.quote("aapl")
 
+  query_string = params["stock_ticker"]
+  get_stock_info(query_string)
 
-  def get_stock_info(stock)
-    stock.each do | stock |
-      return @stock
+  def get_stock_info(stock_ticker)
+    quote_response = StockQuote::Stock.quote("#{stock_ticker}")
+    stock_hash = {}
+
+    quote_response.each do | stock |
+      stock_hash[stock]
     end
-  end
 
-  # binding.pry
-  # puts 'end'
+    return @stock_hash
+  end
 
   erb(:index)
 end
@@ -26,3 +28,6 @@ end
 get '/about' do
   erb(:about)
 end
+
+# binding.pry
+# puts 'end'
