@@ -21,7 +21,6 @@ get '/' do
 
     return @stock_hash
   end
-
   erb(:index)
 end
 
