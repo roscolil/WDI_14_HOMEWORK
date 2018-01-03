@@ -4,23 +4,26 @@ require "sinatra"
 require "sinatra/reloader"
 require "stock_quote"
 
-
+# Tried a bunch of different stuff here and felt i've wasted a lot of time on it.
+# Just don't seem to be getting it. The solution is probably obvious
 
 get '/' do
 
-  query_string = params["stock_ticker"]
-  get_stock_info(query_string)
+  @exchange = StockQuote::Stock.quote("aapl")
 
-  def get_stock_info(stock_ticker)
-    quote_response = StockQuote::Stock.quote("#{stock_ticker}")
-    stock_hash = {}
-
-    quote_response.each do | stock |
-      stock_hash[stock]
-    end
-
-    return @stock_hash
-  end
+  # query_string = params["stock_ticker"]
+  # get_stock_info(query_string)
+  #
+  # def get_stock_info(stock_ticker)
+  #   quote_response = StockQuote::Stock.quote("#{stock_ticker}")
+  #   stock_hash = {}
+  #
+  #   quote_response.each do | stock |
+  #     stock_hash[stock]
+  #   end
+  #
+  #   return @stock_hash
+  # end
   erb(:index)
 end
 
