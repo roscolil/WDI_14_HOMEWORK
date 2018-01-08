@@ -18,13 +18,15 @@ get '/search_result' do
 
   @title = result["Title"]
   @rated = result["Rated"]
+  @genre = result["Genre"]
+  @actors = result["Actors"]
   @released = result["Released"]
   @director = result["Director"]
   @language = result["Language"]
   @awards = result["Awards"]
   @poster = result["Poster"]
   @imdb_rating = result["imdbRating"]
+  @plot = result["Plot"]
 
   erb :search_result
-
 end
