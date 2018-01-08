@@ -1,16 +1,16 @@
 
 html, body {
-  background-image: url(../image.jpg);
+  background-image: url(../popcorn.jpg);
   background-position: center;
   background-size: cover;
   font-family: verdana;
-  color: white;
   height: 100%;
 }
 
 body nav a {
   text-decoration: none;
-  color: lightgreen;
+  color: blue;
+  font-weight: bold;
 }
 
 form {
@@ -18,6 +18,9 @@ form {
   margin-top: 120px;
 }
 
+a {
+  margin-right: 10px;
+}
 input {
   size: 150px;
   font-size: 25px;
@@ -50,7 +53,7 @@ span {
 h1 {
   font-size: 40px;
   font-family: 'Anton', sans-serif;
-  color: yellow;
+  color: darkgreen;
 }
 
 .search_title {
@@ -64,7 +67,7 @@ h2 {
 img {
   float: right;
   vertical-align: middle;
-  margin-right: 80px;
+  margin-right: 130px;
 }
 
 button {
