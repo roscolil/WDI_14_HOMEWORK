@@ -11,10 +11,13 @@ get '/about' do
   erb :about
 end
 
-get 'movie_get' do
-  
-end
+get '/search_result' do
+  apikey = "apikey=2f6435d9"
+  movie = params[:title]
+  result = HTTParty.get("http://omdbapi.com/?#{apikey}&t=#{movie}").parsed_response
+  @title = result["Title"]
+  @year = result["Year"]
+  @rated = result["Rated"]
+  @released = result["Released"]
 
-get 'search_result' do
-  return result = HTTParty.get('http://omdbapi.com/?t=once').parsed_response
 end
