@@ -5,11 +5,11 @@ require "sinatra/reloader"
 require "stock_quote"
 
 # Tried a bunch of different stuff here and felt i've wasted a lot of time on it.
-# Just don't seem to be getting it. The solution is probably obvious
+# The solution is probably obvious
 
 get '/' do
 
-  @exchange = StockQuote::Stock.quote("aapl")
+  @exchange = StockQuote::Stock.quote("aapl")   # just returning a hash symbol
 
   # query_string = params["stock_ticker"]
   # get_stock_info(query_string)
