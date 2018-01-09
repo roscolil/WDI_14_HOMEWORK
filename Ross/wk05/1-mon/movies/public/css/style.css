@@ -156,7 +156,7 @@ background: -moz-linear-gradient( center top, rgb(255,255,255) 0%, rgb(235,235,2
 }
 
 /*** SEARCH BUTTON ***/
-.submit_3{
+.submit_3, .reset_btn {
 background: #44921f;/* Fallback color for non-css3 browsers */
 /* Gradients */
 background: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(79,188,32)), color-stop(0.15, rgb(73,157,34)), color-stop(0.88, rgb(62,135,28)), color-stop(1, rgb(49,114,21)));
@@ -185,14 +185,14 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
 -webkit-box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
 }
 /*** SEARCH BUTTON HOVER ***/
-.submit_3:hover {
+.submit_3:hover, .reset_btn:hover {
 background: #4ea923; /* Fallback color for non-css3 browsers */
 
 /* Gradients */
 background: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(89,222,27)), color-stop(0.15, rgb(83,179,38)), color-stop(0.8, rgb(66,143,27)), color-stop(1, rgb(54,120,22)));
 background: -moz-linear-gradient( center top, rgb(89,222,27) 0%, rgb(83,179,38) 15%, rgb(66,143,27) 80%, rgb(54,120,22) 100%);
 }
-.submit_3:active {
+.submit_3:active, .reset_btn:active {
 background: #4ea923; /* Fallback color for non-css3 browsers */
 
 /* Gradients */
