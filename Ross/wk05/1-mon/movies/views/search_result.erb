@@ -1,19 +1,9 @@
-<h1>Seach Result for <%= @title %></h1>
+<h1>Search Result for <%= @movie %></h1>
 
-<div class="results">
-  <h2>Title: <span><%= @title %></span></h2>
-  <h2>Rated: <span><%= @rated %></span></h2>
-  <h2>Genre: <span><%= @genre %></span></h2>
-  <h2>Actors: <span><%= @actors %></span></h2>
-  <h2>Released: <span><%= @released %></span></h2>
-  <h2>Director: <span><%= @director %></span></h2>
-  <h2>Language: <span><%= @language %></span></h2>
-  <h2>Awards: <span><%= @awards %></span></h2>
-  <h2>IMDB Rating: <span><%= @imdb_rating %></span></h2>
+<div>
+  <ul>
+  <% @search.each do |movie| %>
+  <a href="/movie_result"><li><%= movie["Title"] %></li></a>
+  <% end %>
+  </ul>
 </div>
-
-<img src="<%= @poster %>">
-
-<footer>
-  <h2>Plot: <span><%= @plot %></h2>
-</footer>

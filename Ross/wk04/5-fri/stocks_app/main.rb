@@ -8,8 +8,10 @@ require "stock_quote"
 # The solution is probably obvious
 
 get '/' do
+  #stock = params[:stock]
+  result = StockQuote::Stock.quote("aapl")   # just returning a hash symbol
 
-  @exchange = StockQuote::Stock.quote("aapl")   # just returning a hash symbol
+
 
   # query_string = params["stock_ticker"]
   # get_stock_info(query_string)

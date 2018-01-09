@@ -3,6 +3,7 @@ html, body {
   background-image: url(../popcorn.jpg);
   background-position: center;
   background-size: cover;
+  
   font-family: verdana;
   height: 100%;
 }

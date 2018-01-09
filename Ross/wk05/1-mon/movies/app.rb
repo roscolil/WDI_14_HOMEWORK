@@ -14,8 +14,12 @@ end
 get '/search_result' do
   apikey = "apikey=2f6435d9"
   movie = params[:title]
-  result = HTTParty.get("http://omdbapi.com/?#{apikey}&t=#{movie}").parsed_response
+  result = HTTParty.get("http://omdbapi.com/?#{apikey}&s=#{movie}").parsed_response
+  @search = result["Search"]
+  erb :search_result
+end
 
+get '/movie_result' do
   @title = result["Title"]
   @rated = result["Rated"]
   @genre = result["Genre"]
@@ -27,6 +31,5 @@ get '/search_result' do
   @poster = result["Poster"]
   @imdb_rating = result["imdbRating"]
   @plot = result["Plot"]
-
-  erb :search_result
+  erb :movie_result
 end
