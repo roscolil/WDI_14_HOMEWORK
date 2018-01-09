@@ -1,9 +1,9 @@
 <h1>Search Result for <%= @movie %></h1>
 
-<div>
+<div class="search_list">
   <ul>
   <% @search.each do |movie| %>
-  <a href="/movie_result"><li><%= movie["Title"] %></li></a>
+  <a href="/movie_result?title=<%= movie["Title"] %>"><li><%= movie["Title"] %></li></a>
   <% end %>
   </ul>
 </div>

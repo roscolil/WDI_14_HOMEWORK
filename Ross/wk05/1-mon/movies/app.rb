@@ -12,24 +12,26 @@ get '/about' do
 end
 
 get '/search_result' do
-  apikey = "apikey=2f6435d9"
-  movie = params[:title]
-  result = HTTParty.get("http://omdbapi.com/?#{apikey}&s=#{movie}").parsed_response
+  @apikey = "apikey=2f6435d9"
+  @movie = params[:title]
+  result = HTTParty.get("http://omdbapi.com/?#{@apikey}&s=#{@movie}").parsed_response
   @search = result["Search"]
   erb :search_result
 end
 
 get '/movie_result' do
-  @title = result["Title"]
-  @rated = result["Rated"]
-  @genre = result["Genre"]
-  @actors = result["Actors"]
-  @released = result["Released"]
-  @director = result["Director"]
-  @language = result["Language"]
-  @awards = result["Awards"]
-  @poster = result["Poster"]
-  @imdb_rating = result["imdbRating"]
-  @plot = result["Plot"]
+  movie_result = HTTParty.get("http://omdbapi.com/?apikey=2f6435d9&t=#{params[:title]}").parsed_response
+
+  @title = movie_result["Title"]
+  @rated = movie_result["Rated"]
+  @genre = movie_result["Genre"]
+  @actors = movie_result["Actors"]
+  @released = movie_result["Released"]
+  @director = movie_result["Director"]
+  @language = movie_result["Language"]
+  @awards = movie_result["Awards"]
+  @poster = movie_result["Poster"]
+  @imdb_rating = movie_result["imdbRating"]
+  @plot = movie_result["Plot"]
   erb :movie_result
 end
