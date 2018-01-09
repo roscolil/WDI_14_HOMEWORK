@@ -71,6 +71,11 @@ h1 {
 
 .search_list ul a {
   color: white;
+  text-decoration: none;
+}
+
+.search_list ul a:hover {
+  color: rgb(79,188,32);
 }
 
 .history {
