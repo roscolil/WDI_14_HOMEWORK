@@ -33,5 +33,16 @@ get '/movie_result' do
   @poster = movie_result["Poster"]
   @imdb_rating = movie_result["imdbRating"]
   @plot = movie_result["Plot"]
+
+  file = File.open('history.txt', 'a')
+  file.puts(params[:title])
+  file.close
+
   erb :movie_result
+end
+
+get '/history' do
+  file = File.readlines('history.txt')
+  @list = file
+  erb :history
 end
