@@ -20,7 +20,7 @@ get '/search_result' do
 end
 
 get '/movie_result' do
-  movie_result = HTTParty.get("http://omdbapi.com/?apikey=2f6435d9&t=#{params[:title]}").parsed_response
+  movie_result = HTTParty.get("http://omdbapi.com/?apikey=2f6435d9&i=#{params[:id]}").parsed_response
 
   @title = movie_result["Title"]
   @rated = movie_result["Rated"]

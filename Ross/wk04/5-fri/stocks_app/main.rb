@@ -11,7 +11,9 @@ get '/' do
   #stock = params[:stock]
   result = StockQuote::Stock.quote("aapl")   # just returning a hash symbol
 
+  result_arr = result.instance_variable_get(("@financials").intern)
 
+  @financials = result_arr[0]
 
   # query_string = params["stock_ticker"]
   # get_stock_info(query_string)

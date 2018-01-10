@@ -2,8 +2,10 @@
 
 <div class="search_list">
   <ul>
-  <% @search.each do |movie| %>
-  <a href="/movie_result?title=<%= movie["Title"] %>"><li><%= movie["Title"] %></li></a>
-  <% end %>
+    <% @search.each do |movie| %>
+    <a href="/movie_result?id=<%= movie["imdbID"] %>">
+      <li><%= movie["Title"] %></li>
+    </a>
+    <% end %>
   </ul>
 </div>

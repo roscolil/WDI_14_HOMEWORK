@@ -83,6 +83,10 @@ h1 {
   color: white;
 }
 
+.movie_result {
+  display: inline-block;
+}
+
 h2 {
   font-size: 20px;
 }
