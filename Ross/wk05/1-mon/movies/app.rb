@@ -35,7 +35,7 @@ get '/movie_result' do
   @plot = movie_result["Plot"]
 
   file = File.open('history.txt', 'a')
-  file.puts(params[:title])
+  file.puts(@title)
   file.close
 
   erb :movie_result
