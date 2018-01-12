@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+require 'pg'
 
 
 get '/' do
@@ -19,8 +20,11 @@ get '/search_result' do
   erb :search_result
 end
 
+
 get '/movie_result' do
   movie_result = HTTParty.get("http://omdbapi.com/?apikey=2f6435d9&i=#{params[:id]}").parsed_response
+
+  # insert db query for movie here??
 
   @title = movie_result["Title"]
   @rated = movie_result["Rated"]
@@ -33,6 +37,12 @@ get '/movie_result' do
   @poster = movie_result["Poster"]
   @imdb_rating = movie_result["imdbRating"]
   @plot = movie_result["Plot"]
+
+
+  conn = PG.connect(dbname: 'movies_db')
+  sql = "INSERT INTO movies_cache (title, rated, genre, released, director) VALUES ('#{@title}', '#{@rated}', '#{@genre}', '#{@released}', '#{@director}');"
+  conn.exec(sql)
+  conn.close
 
   file = File.open('history.txt', 'a')
   file.puts(@title)
