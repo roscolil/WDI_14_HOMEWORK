@@ -4,5 +4,6 @@ CREATE TABLE movies_cache (
   rated VARCHAR(255),
   genre VARCHAR(255),
   released VARCHAR(255),
-  director VARCHAR(255)
+  director VARCHAR(255),
+  imdbID VARCHAR(255)
   );

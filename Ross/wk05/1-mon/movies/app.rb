@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+require 'pry'
 require 'pg'
 
 
@@ -20,11 +21,8 @@ get '/search_result' do
   erb :search_result
 end
 
-
 get '/movie_result' do
   movie_result = HTTParty.get("http://omdbapi.com/?apikey=2f6435d9&i=#{params[:id]}").parsed_response
-
-  # insert db query for movie here??
 
   @title = movie_result["Title"]
   @rated = movie_result["Rated"]
@@ -37,18 +35,31 @@ get '/movie_result' do
   @poster = movie_result["Poster"]
   @imdb_rating = movie_result["imdbRating"]
   @plot = movie_result["Plot"]
-
-
+  # @imdbID = movie_result["Search"][0]["imdbID"]
   conn = PG.connect(dbname: 'movies_db')
-  sql = "INSERT INTO movies_cache (title, rated, genre, released, director) VALUES ('#{@title}', '#{@rated}', '#{@genre}', '#{@released}', '#{@director}');"
-  conn.exec(sql)
-  conn.close
 
-  file = File.open('history.txt', 'a')
-  file.puts(@title)
-  file.close
+  if "SELECT EXISTS (SELECT 1 FROM movies_cache WHERE imdbid = '#{params[:id]}');" == 't'
+    sql = "SELECT title, rated, genre, released, director FROM movies_cache;"
+    conn.exec(sql)
+    conn.close
 
-  erb :movie_result
+    erb :cached_result
+  else
+    conn = PG.connect(dbname: 'movies_db')
+    sql = "INSERT INTO movies_cache (title, rated, genre, released, director, imdbID) VALUES ('#{@title}', '#{@rated}', '#{@genre}', '#{@released}', '#{@director}', '#{params[:id]}');"
+    conn.exec(sql)
+    conn.close
+
+    file = File.open('history.txt', 'a')
+    file.puts(@title)
+    file.close
+
+    erb :movie_result
+  end
+end
+
+get '/cached_result' do
+  erb :cached_result
 end
 
 get '/history' do
