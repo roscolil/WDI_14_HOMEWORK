@@ -12,7 +12,7 @@ get '/search_result' do
   @apikey = 'apikey=2f6435d9'
   @movie = params[:title]
   result = HTTParty.get("http://omdbapi.com/?#{@apikey}&s=#{@movie}").parsed_response
-  @search = result['Search']        
+  @search = result['Search']
   erb :search_result
 end
 
