@@ -1,3 +1,3 @@
 class Student < ApplicationRecord
-  belongs_to :house
+  belongs_to :houses
 end
