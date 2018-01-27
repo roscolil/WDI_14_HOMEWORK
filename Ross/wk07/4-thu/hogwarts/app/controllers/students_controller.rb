@@ -14,11 +14,13 @@ class StudentsController < ApplicationController
   def create
     student = Student.new
     student.name = params[:name]
-    student.house_id = Student.
+    rand_house = House.order("RANDOM()").first
+    student.house_id = rand_house.id
     if student.save
       redirect_to '/students'
     else
       render :home
+    end
   end
 
 end
