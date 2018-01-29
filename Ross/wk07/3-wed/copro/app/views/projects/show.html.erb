@@ -1,0 +1,44 @@
+<h2>Project details</h2>
+
+<h3><%= @project.title %></h3>
+
+<div class="wrapper">
+  <img src="<%= @project.preview.url %>">
+  <span>&#128077;</span>
+</div>
+
+<form action="/likes" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="project_id" value="<%= @project.id %>">
+  <!-- <%= @project.likes.count %> -->
+  <span class="likes"></span><span> Likes</span>
+  <!-- <button>Like</button> -->
+</form>
+
+<form action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="project_id" value="<%= @project.id %>">
+  <textarea name="body" rows="4" cols="80"></textarea>
+  <button>Post comment</button>
+</form>
+
+<hr>
+
+<% @comments.each do |comment| %>
+  <p><%= comment.body %></p>
+<% end %>
+
+<script>
+  var thumbsUp = document.querySelector('.wrapper span');
+
+    thumbsUp.addEventListener('click', function(event){
+      var commonParent = event.target.closest('main');
+      var likes = commonParent.querySelector('.likes');
+      likes.textContent = Number(likes.textContent) + 1;
+    });
+
+  // var heart = document.querySelector('.wrapper span');
+  // heart.addEventListener('click', function() {
+  //   console.log("Like");
+  // })
+</script>
