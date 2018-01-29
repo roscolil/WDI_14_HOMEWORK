@@ -4,7 +4,7 @@
 
 <div class="wrapper">
   <img src="<%= @project.preview.url %>">
-  <span>&#128077;</span>
+  <span class="thumb">&#128077;</span>
 </div>
 
 <form action="/likes" method="post">
@@ -29,9 +29,9 @@
 <% end %>
 
 <script>
-  var thumbsUp = document.querySelector('.wrapper span');
+  var thumbsUp = document.querySelector('.thumb');
 
-    thumbsUp.addEventListener('click', function(event){
+    thumbsUp.addEventListener('click', function(event) {
       var commonParent = event.target.closest('main');
       var likes = commonParent.querySelector('.likes');
       likes.textContent = Number(likes.textContent) + 1;

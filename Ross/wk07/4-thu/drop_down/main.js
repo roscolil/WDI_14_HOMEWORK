@@ -7,8 +7,6 @@ for (var i = 0; i < cities.length; i++) {
   option.value = cities[i];
   select.appendChild(option);
 }
-
-
 function loadPicture() {
   switch (option.value) {
     case cities[0]:
@@ -31,7 +29,11 @@ function loadPicture() {
 }
 
 
-if (document.querySelector('body').classList.length >= 1) {
-  document.querySelector('body').className = "";
-  loadPicture();
-}
+document.addEventListener('click', function () {
+  console.log('test');
+  if (document.body.classList.length >= 1) {
+    document.body.className = "";
+    debugger
+    loadPicture();
+  }
+});
