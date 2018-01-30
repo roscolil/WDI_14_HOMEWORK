@@ -27,6 +27,14 @@ label, input {
   background-color: #485e49;
 }
 
+.about {
+width: 70%;
+}
+
+.login {
+  right: 0;
+}
+
 .project h2 {
   display: none;
   color: white;
