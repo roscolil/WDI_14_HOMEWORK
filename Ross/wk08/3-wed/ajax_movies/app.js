@@ -6,7 +6,9 @@ $('button').on('click', function() {
   var options = {
     url: "http://www.omdbapi.com/?apikey=2f6435d9&s=" + $newMovieName
   };
+
   $('.container').empty();
+  
   $.ajax(options).done(function(response){
     response.Search.forEach(function(movie){
       var $newSectElem = $('<section>');
