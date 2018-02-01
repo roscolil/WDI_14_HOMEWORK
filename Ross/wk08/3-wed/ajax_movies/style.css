@@ -18,3 +18,7 @@ button {
   font-size: 13px;
   font-weight: bold;
 }
+
+section img {
+  border-radius: 5px;
+}
