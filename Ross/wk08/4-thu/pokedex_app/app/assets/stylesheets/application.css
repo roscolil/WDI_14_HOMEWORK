@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+html, body {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.list {
+  list-style: none;
+}
+
+.species {
+
+}
+
+.nickname {
+
+}
+
+.level {
+
+}

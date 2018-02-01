@@ -1,0 +1,13 @@
+<h2>List of pokemons</h2>
+
+<form class="" action="/pokemons/new" method="get">
+  <button>Add a Pokemon</button>
+</form>
+
+<br>
+
+<% @pokemons.each do |pokemon|%>
+  <ul class="list">
+    <li><span class="species"><%= pokemon.species %> </span><span class="nickname"> <%= pokemon.nickname %> </span><span class="level"> <%= pokemon.level %> </span></li>
+  </ul>
+<% end %>

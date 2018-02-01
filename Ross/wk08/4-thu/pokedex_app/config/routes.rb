@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :pokemons
 
-  get '/', to: 'pages#index'
+  get '/', to: 'pokemons#index'
 
   get '/pokemons/new', to: 'pokemons#new'
 
