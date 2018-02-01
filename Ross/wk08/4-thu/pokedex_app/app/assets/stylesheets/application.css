@@ -16,11 +16,10 @@
 
 html, body {
   box-sizing: border-box;
-}
-
-body {
-  background-image: url(pokemon_index.jpeg);
-  background-color: lightblue;
+  height: 100%;
+  background-size: contain;
+  background-image: url(sad_pokemon.png);
+  color: white;
 }
 
 table {
@@ -33,7 +32,6 @@ th {
 
 
 td, th {
-  /* border: 1px solid #999; */
   padding: 0.5rem;
   text-align: left;
   font-size: 20px;
@@ -42,4 +40,9 @@ td, th {
 form, input {
   width: 100px;
   height: 20px;
+}
+
+.index {
+  float: right;
+  padding-right: 250px;
 }

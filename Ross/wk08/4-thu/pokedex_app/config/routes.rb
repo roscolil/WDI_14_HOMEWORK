@@ -8,5 +8,4 @@ Rails.application.routes.draw do
 
   post '/pokemons', to: 'pokemons#create'
 
-
 end

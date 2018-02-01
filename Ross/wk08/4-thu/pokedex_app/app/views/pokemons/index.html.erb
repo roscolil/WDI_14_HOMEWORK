@@ -1,26 +1,28 @@
-<h2>List of pokemons</h2>
+<div class="index">
+  <h2>List of pokemons</h2>
 
-<form class="" action="/pokemons/new" method="get">
-  <button>Add a Pokemon</button>
-</form>
+  <form class="" action="/pokemons/new" method="get">
+    <button>Add a Pokemon</button>
+  </form>
 
-<br>
+  <br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Species</th>
-      <th>Nickname</th>
-      <th>Level</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @pokemons.each do |pokemon|%>
-    <tr>
-      <td><%= pokemon.species %></td>
-      <td><%= pokemon.nickname %></td>
-      <td><%= pokemon.level %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Species</th>
+        <th>Nickname</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pokemons.each do |pokemon|%>
+      <tr>
+        <td><%= pokemon.species %></td>
+        <td><%= pokemon.nickname %></td>
+        <td><%= pokemon.level %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
