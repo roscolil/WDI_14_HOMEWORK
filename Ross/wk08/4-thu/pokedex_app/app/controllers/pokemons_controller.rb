@@ -15,7 +15,7 @@ class PokemonsController < ApplicationController
     if pokemon.save
       redirect_to '/'
     else
-      redirect_to '/pokemons/new'
+      render :index
     end
   end
 

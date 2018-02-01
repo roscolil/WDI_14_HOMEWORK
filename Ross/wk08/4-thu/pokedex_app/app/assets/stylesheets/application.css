@@ -19,21 +19,27 @@ html, body {
 }
 
 body {
+  background-image: url(pokemon_index.jpeg);
   background-color: lightblue;
 }
 
-.list {
-  list-style: none;
+table {
+  border-collapse: collapse;
 }
 
-.species {
-
+th {
+  border-bottom: 2px solid black;
 }
 
-.nickname {
 
+td, th {
+  /* border: 1px solid #999; */
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 20px;
 }
 
-.level {
-
+form, input {
+  width: 100px;
+  height: 20px;
 }
