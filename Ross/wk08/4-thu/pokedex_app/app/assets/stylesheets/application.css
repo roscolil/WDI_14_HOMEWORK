@@ -42,7 +42,7 @@ form, input {
   height: 20px;
 }
 
-.index {
+.index, .new {
   float: right;
   padding-right: 250px;
 }
