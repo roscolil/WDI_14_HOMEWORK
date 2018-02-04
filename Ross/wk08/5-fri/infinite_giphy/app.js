@@ -26,6 +26,7 @@ $('button').on('click', function() {
   $('input').val('');
   ajaxGifRequest(giphs1);
 
+  // Incrementing offset by 10 each time user scrolls to bottom of page
   $(window).scroll(function() {
     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
       var giphs2 = {
