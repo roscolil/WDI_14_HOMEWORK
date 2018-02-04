@@ -1,0 +1,32 @@
+html {
+  background-color: #aeff79
+}
+
+.heading {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+}
+
+label, input {
+  font-size: 20px;
+}
+
+button {
+  font-weight: bold;
+  font-size: 15px;
+  height: 29px;
+  width: 70px;
+  vertical-align: top;
+}
+
+.form {
+  text-align: center;
+}
+
+.list section img {
+  padding-top: 20px;
+}
+
+.display-result {
+  font-size: 25px;
+}
