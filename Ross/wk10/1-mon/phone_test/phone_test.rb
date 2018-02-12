@@ -12,13 +12,11 @@ class PhoneTest < MiniTest::Test
   end
 
   def test_cleans_number_with_dots
-    skip
     number = Phone.new("123.456.7890").number
     assert_equal "1234567890", number
   end
 
   def test_valid_when_11_digits_and_first_is_1
-    skip
     number = Phone.new("11234567890").number
     assert_equal "1234567890", number
   end
