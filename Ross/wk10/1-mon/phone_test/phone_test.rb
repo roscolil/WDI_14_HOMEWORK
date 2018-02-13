@@ -22,7 +22,6 @@ class PhoneTest < MiniTest::Test
   end
 
   def test_invalid_when_11_digits
-    skip
     number = Phone.new("21234567890").number
     assert_equal "0000000000", number
   end
