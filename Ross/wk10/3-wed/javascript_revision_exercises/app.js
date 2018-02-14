@@ -168,16 +168,21 @@ false false            false
 // If a patron is older than 75, print out "Are you sure you want to be here?".
 // Your answer goes here.
 var patronAge = 30;
-if (patronAge > 21) {
-  console.log('Come on in!');
-} else if (patronAge >= 18 && <= 21) {
-  console.log('Come on in (but not drinking');
-} else if (patronAge < 18) {
-  console.log('You\'re too young to be in here!');
-} else {
-  console.log('Are you sure you want to be here?');
-}
+var hasId = true;
 
+if (hasId) {
+  if (patronAge > 21) {
+    console.log('Come on in!');
+  } else if (patronAge >= 18 && <= 21) {
+    console.log('Come on in (but not drinking');
+  } else if (patronAge < 18) {
+    console.log('You\'re too young to be in here!');
+  } else {
+    console.log('Are you sure you want to be here?');
+  }
+} else {
+  console.log('You need ID');
+}
 
 // Bonus
 // Bar patrons must have an ID
