@@ -5,6 +5,6 @@ var url = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&APP
 
 request(url, function(error, response, body){
   var output = JSON.parse(body);
-  var tempCelsius = output.main.temp - 273.15;
+  var tempCelsius = output.main.temp - 273;
   console.log(tempCelsius.toFixed(1));
 });
