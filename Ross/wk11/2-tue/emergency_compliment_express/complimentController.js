@@ -5,8 +5,15 @@ function complimentFunct(req, res) {
   "Shut up and take my money",
   "It's almost beer o'clock",
   "The Force is strong with you"
-];
+  ];
 
-var colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"];  
+  var colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"];
+
+  res._.sample(compliments);
+  res._.sample(colors);
 
 }
+
+module.exports = {
+  index: complimentFunct
+};
