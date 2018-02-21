@@ -31,7 +31,7 @@ export default class PasswordEstimator extends React.Component {
     const point4Msg = "You're so close i can smell it"
     const point5Msg = "Congratulations. You qualify for a job in cryptography at the NSA"
 
-
+  // This logic could be moved into it's own file in the lib folder but i ran out of time
     if (content.length === 0) {
       message = "Enter your password"
     } else if (regEx5.test(content)) {
