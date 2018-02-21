@@ -1,5 +1,5 @@
 import React from 'react'
-import PasswordInput from './PasswordEstimator'
+import PasswordEstimator from './PasswordEstimator'
 
 export default class App extends React.Component {
 
